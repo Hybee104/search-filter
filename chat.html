@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+
+    <style>
+       
+       .task{
+        background-color: green;
+        color: white;
+        border-radius: 0px;
+        box-shadow: 0 0 3px;
+        width: 20%;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        padding: 5px;
+        margin-bottom: 15px;
+        margin-left: 15px;
+        list-style-type: none;
+
+       }
+
+       .add-task{
+        cursor: pointer;
+        color: green;
+       }
+
+
+</style>
+
+
+<body>
+
+
+    <div class="container w3-margin">
+    
+     <input type="text" class="input-task">
+
+     <button class="add-task">send</button>
+    </div>
+
+    <div class="display"></div>
+
+   
+
+    
+</body>
+</html>
+
+
+
+  <script>
+
+   var inputTask = document.querySelector('.input-task');
+   var displayBtn = document.querySelector('.display');
+   var addTask = document.querySelector('.add-task');
+
+ 
+  addTask.addEventListener('click', function(){
+    
+    var task = document.createElement('div');
+    task.classList.add('task');
+
+    var li = document.createElement('li');
+    li.innerHTML = `${inputTask.value}`;
+    task.appendChild(li);
+
+   
+    if(inputTask.value === ''){
+        alert('please add a task')
+    }else{
+        displayBtn.appendChild(task)
+    }
+
+  })
+  
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  addTask.addEventListener('click', function(e){
+   
+    var task = document.createElement('div');
+    task.classList.add('task');
+
+    var li = document.createElement('li');
+    li.innerHTML = `${inputTask.value}`
+    task.appendChild(li);
+
+    if(inputTask.value === ""){
+       alert('pls enter a task')
+    }else{
+       displayBtn.appendChild(task)
+    }
+  })*/
+
+
+
+</script>
+  
